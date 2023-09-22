@@ -1,0 +1,36 @@
+.maincontainer{
+   max-width: 1400px;
+   width: 100%;
+   margin: auto;
+}
+
+.sectionpadding{
+    padding: 40px 0px;
+}
+
+// Table Responsive
+
+@media screen and (min-width:200px) and (max-width:767px){
+    .cart_list{
+        .cart_list_table{ border:0px;
+            .MuiTableRow-root{
+                margin-bottom:30px; display: block;
+                &:nth-child(even){
+                    background-color: beige;
+                }
+            }
+
+            .MuiTableCell-root{
+                display: block;position: relative;padding-left: 30%; 
+                &::after{
+                    content: attr(data-th);position: absolute;font-size: 15px;  top:50%; left:20px;display: block;transform: translateY(-50%);
+                }
+            }
+            .prod_cart{
+                flex-wrap: wrap; justify-content: center;
+            }
+        }
+       
+
+    }
+}
